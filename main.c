@@ -92,7 +92,7 @@ int main(int argc, char *argv[]) {
 	check_pam(handle, "pam_acct_mgmt", pam_acct_mgmt(handle, PAM_SILENT));
 	check_pam(handle, "pam_setcred", pam_setcred(handle, PAM_ESTABLISH_CRED));
 
-	setup_vt(1);
+	setup_vt(7);
 
 	struct passwd* pwd = getpwnam(argv[1]);
 	if (pwd == NULL) {
@@ -102,7 +102,7 @@ int main(int argc, char *argv[]) {
 
 	check_pam(handle, "pam_putenv", pam_putenv(handle, "XDG_SEAT=seat0"));
 	check_pam(handle, "pam_putenv", pam_putenv(handle, "XDG_SESSION_CLASS=user"));
-	check_pam(handle, "pam_putenv", pam_putenv(handle, "XDG_VTNR=1"));
+	check_pam(handle, "pam_putenv", pam_putenv(handle, "XDG_VTNR=7"));
 	check_pam(handle, "pam_putenv", pam_putenv_tuple(handle, "HOME", pwd->pw_dir));
 	check_pam(handle, "pam_putenv", pam_putenv_tuple(handle, "PWD", pwd->pw_dir));
 	check_pam(handle, "pam_putenv", pam_putenv_tuple(handle, "SHELL", pwd->pw_shell));
