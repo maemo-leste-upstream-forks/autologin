@@ -2,7 +2,7 @@ Source: autologin
 Section: misc
 Priority: optional
 Maintainer: Carl Philipp Klemm <carl@uvos.xyz>
-Build-Depends: meson, libpam0g-dev, libelogind-dev
+Build-Depends: meson, libpam0g-dev, libelogind-dev, debhelper
 Standards-Version: 3.7.3
 
 Package: autologin
