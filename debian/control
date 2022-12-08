@@ -1,0 +1,14 @@
+Source: autologin
+Section: misc
+Priority: optional
+Maintainer: Carl Philipp Klemm <carl@uvos.xyz>
+Build-Depends: meson, libpam0g-dev, libelogind-dev
+Standards-Version: 3.7.3
+
+Package: autologin
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Recommends:
+Description: Daemon for automatic login on TTY
